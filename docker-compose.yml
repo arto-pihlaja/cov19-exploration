@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  juplab:
+    image: "jupyter/scipy-notebook"
+    ports:
+      - "8888:8888"
+    volumes:
+      - ~/notebooks/cov19-exploration:/home/jovyan/work
+      - ~/data:/home/jovyan/data
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
